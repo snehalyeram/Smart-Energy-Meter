@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensor Data Monitoring</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Real-Time Sensor Data</h1>
+    <table id="sensor-data">
+      <thead>
+        <tr>
+          <th>Voltage (V)</th>
+          <th>Current (A)</th>
+          <th>Power (W)</th>
+          <th>Energy (kWh)</th>
+          <th>Frequency (Hz)</th>
+          <th>Power Factor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="voltage">--</td>
+          <td id="current">--</td>
+          <td id="power">--</td>
+          <td id="energy">--</td>
+          <td id="freq">--</td>
+          <td id="pf">--</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+      <!-- Download button -->
+    <a href="https://docs.google.com/spreadsheets/d/1gjkg8ggZn9xntmRJXc-1GWDrp7GWLeucKpZCw2OwhnM/edit?gid=0#gid=0" id="downloadSheet" class="download-btn" >Download Google Sheets</a>
+
+    <div id="chartContainer" style="height: 300px; width: 90%; padding-top: 20px;"></div>
+    <a id="toggleButton" class="download-btn" >Energy Reset</a>
+
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+
+  <script src="main.js"></script>
+</body>
+</html>
